@@ -1,15 +1,22 @@
 {
-  "name": "pg-shop",
+  "name": "ks-next-js",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "start": "next start"
   },
   "dependencies": {
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-plugin-react": "^7.21.5"
   }
 }
