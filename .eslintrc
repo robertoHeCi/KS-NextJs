@@ -1,12 +1,19 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "standard"
   ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "fetch": true
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -17,7 +24,13 @@
   "plugins": [
     "react"
   ],
+  "settings": {
+    "react": {
+      "version": "detected"
+    }
+  },
   "rules": {
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "no-tabs": ["error"]
   }
 }
