@@ -1,5 +1,6 @@
 import React from 'react'
 import { CardLink } from '../../components/CardLink'
+import styles from '../../styles/Layout.module.css'
 
 const DataFetching = () => {
   const pages = [
@@ -19,18 +20,16 @@ const DataFetching = () => {
       description: 'Single Page application example'
     },
     {
-      title: '',
+      title: 'SG',
       route: '/data-fetching/static-generation',
       description: 'Static generation example'
     }
   ]
 
   return (
-    <nav>
-      <ul>
-        {pages.map(page => <li key={page.route}> <CardLink {...page}/></li>)}
-      </ul>
-    </nav>
+    <section className={styles.grid}>
+      {pages.map(page => <CardLink key={page.route} {...page}/>)}
+    </section>
   )
 }
 
