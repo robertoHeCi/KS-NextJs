@@ -1,9 +1,8 @@
-import React from 'react';
-import Link from "next/link";
-import cardStyles from "../../styles/Card.module.css";
+import React from 'react'
+import Link from 'next/link'
+import cardStyles from '../../styles/Card.module.css'
 
-
-export const CardLink = ({title = '', route = '/', description= ''}) => {
+export const CardLink = ({ title = '', route = '/', description = '' }) => {
   return (
     <Link key={route} href={route}>
       <a className={cardStyles.card}>

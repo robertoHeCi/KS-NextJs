@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import styles from '../../styles/Footer.module.css'
 
 export const Footer = () => {
@@ -10,7 +10,7 @@ export const Footer = () => {
         rel="noopener noreferrer"
       >
         Powered by{' '}
-        <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+        <img src="../../../public/vercel.svg" alt="Vercel Logo" className={styles.logo} />
       </a>
     </footer>
   )
