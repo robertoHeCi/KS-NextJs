@@ -10,13 +10,6 @@ const Isg = ({ posts }) => {
   )
 }
 
-export function getStaticPaths () {
-  return {
-    paths: {},
-    fallback: 'unstable_blocking'
-  }
-}
-
 export async function getStaticProps () {
   const response = await fetch('http://localhost:3000/api/hello')
   const posts = await response.json()
