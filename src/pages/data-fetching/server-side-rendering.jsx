@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Ssr = ({ posts }) => {
   return (<div>
-    <p>Ssr page</p>
+    <p> Ssr page </p>
     {posts && posts.map(({ id, name }) => <p key={id}>{id}:{name}</p>)}
   </div>)
 }
