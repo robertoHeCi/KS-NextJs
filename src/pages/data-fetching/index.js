@@ -1,19 +1,37 @@
-import React from 'react';
-import Link from "next/link";
+import React from 'react'
+import { CardLink } from '../../components/CardLink'
 
 const DataFetching = () => {
+  const pages = [
+    {
+      title: 'SSR',
+      route: '/data-fetching/server-side-rendering',
+      description: 'Server side rendering example'
+    },
+    {
+      title: 'ISG',
+      route: '/data-fetching/incremental-static-generation',
+      description: 'Incremental static generation'
+    },
+    {
+      title: 'SPA',
+      route: '/data-fetching/single-page-application',
+      description: 'Single Page application example'
+    },
+    {
+      title: '',
+      route: '/data-fetching/static-generation',
+      description: 'Static generation example'
+    }
+  ]
 
   return (
     <nav>
       <ul>
-        <li><Link href="/data-fetching/server-side-rendering"><a> SSR</a></Link></li>
-        <li><Link href="/data-fetching/incremental-static-generation"><a>ISG</a></Link></li>
-        <li><Link href="/data-fetching/single-page-application"><a>SPA</a></Link></li>
-        <li><Link href="/data-fetching/static-generation"><a>Static generation</a></Link></li>
+        {pages.map(page => <li key={page.route}> <CardLink {...page}/></li>)}
       </ul>
     </nav>
   )
-
 }
 
 export default DataFetching

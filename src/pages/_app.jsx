@@ -1,18 +1,16 @@
-import { Container } from 'next/app'
 import React from 'react'
 import '../styles/globals.css'
-import {Footer} from "../components/Footer";
+import layoutStyles from '../styles/Layout.module.css'
+import { Footer } from '../components/Footer'
 
 // eslint-disable-next-line react/prop-types
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
   return (
-    <Container>
+    <main className={layoutStyles.main}>
       <Component {...pageProps} />
       <Footer/>
-    </Container>
+    </main>
   )
-
-
 }
 
 export default MyApp

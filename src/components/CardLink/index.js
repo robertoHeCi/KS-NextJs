@@ -1,1 +1,1 @@
-export {CardLink} from './CardLink'
+export { CardLink } from './CardLink'
