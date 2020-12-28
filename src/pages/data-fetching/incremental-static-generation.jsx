@@ -1,24 +1,24 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const Isg = ({posts}) => {
+const Isg = ({ posts }) => {
   return (
     <div>
       <p>ISG page</p>
-      {posts && posts.map(({id, name})=> <p key={id}>{id}:{name}</p>)}
+      {posts && posts.map(({ id, name }) => <p key={id}>{id}:{name}</p>)}
     </div>
   )
 }
 
-export function getStaticPaths() {
+export function getStaticPaths () {
   return {
     paths: {},
     fallback: 'unstable_blocking'
   }
 }
 
-
-export async function getStaticProps() {
-  const response = await fetch("http://localhost:3000/api/hello")
+export async function getStaticProps () {
+  const response = await fetch('http://localhost:3000/api/hello')
   const posts = await response.json()
   return {
     props: {
@@ -30,3 +30,6 @@ export async function getStaticProps() {
 
 export default Isg
 
+Isg.propTypes = {
+  posts: PropTypes.array
+}
