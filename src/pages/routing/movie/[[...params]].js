@@ -3,10 +3,10 @@ import { useRouter } from 'next/router'
 
 const Movie = () => {
   const router = useRouter()
-  const { param } = router.query
+  const { params } = router.query
   return (
     <>
-      <h1>Params: {param?.join('/')}</h1>
+      <h1>Params: {params?.join('/')}</h1>
     </>)
 }
 export default Movie
