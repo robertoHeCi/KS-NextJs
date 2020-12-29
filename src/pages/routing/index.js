@@ -22,6 +22,11 @@ const DataFetching = () => {
       title: 'Post',
       route: '/routing/post/2/1',
       description: 'Post route using a folder as a category and dynamic route '
+    },
+    {
+      title: 'Character',
+      route: '/routing/character/1',
+      description: 'Character dinamyc route'
     }
   ]
 
