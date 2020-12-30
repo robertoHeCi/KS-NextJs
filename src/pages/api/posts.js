@@ -3,7 +3,7 @@
 const posts = [
   {
     id: 1,
-    name: 'Nextjs is awesome 2'
+    name: 'Nextjs is awesome'
   },
   {
     id: 2,
