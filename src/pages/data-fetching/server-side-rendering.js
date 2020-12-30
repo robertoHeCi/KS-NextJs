@@ -9,7 +9,7 @@ const Ssr = ({ posts }) => {
 }
 
 export async function getServerSideProps () {
-  const response = await fetch(`${process.env.BASE_URL}/api/hello`)
+  const response = await fetch(`${process.env.BASE_URL}/api/posts`)
   const posts = await response.json()
   return {
     props: {

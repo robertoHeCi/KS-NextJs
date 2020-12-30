@@ -21,7 +21,7 @@ export async function getStaticPaths () {
 }
 
 export async function getStaticProps () {
-  const response = await fetch(`${process.env.BASE_URL}/api/hello`)
+  const response = await fetch(`${process.env.BASE_URL}/api/posts`)
   const posts = await response.json()
   return {
     props: {

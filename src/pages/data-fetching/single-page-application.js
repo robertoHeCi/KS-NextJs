@@ -7,7 +7,7 @@ const { publicRuntimeConfig } = getConfig()
 const Spa = () => {
   const [posts, setPosts] = React.useState([])
   React.useEffect(() => {
-    fetch(`${publicRuntimeConfig.BASE_URL}/api/hello`)
+    fetch(`${publicRuntimeConfig.BASE_URL}/api/posts`)
       .then(response => response.json())
       .then(setPosts)
   }, [])
