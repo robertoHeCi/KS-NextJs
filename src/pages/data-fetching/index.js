@@ -10,9 +10,14 @@ const DataFetching = () => {
       description: 'Server side rendering example'
     },
     {
-      title: 'ISG',
-      route: '/data-fetching/incremental-static-generation',
-      description: 'Incremental static generation'
+      title: 'ISG Basic',
+      route: '/data-fetching/isg',
+      description: 'Incremental static generation in basic pages'
+    },
+    {
+      title: 'ISG Dynamic',
+      route: '/data-fetching/isg/1',
+      description: 'Incremental static generation in dynamic pages'
     },
     {
       title: 'SPA',
