@@ -1,13 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Isg = ({ posts }) => {
+const IsgDynamic = ({ posts }) => {
   return (
     <div>
-      <p>ISG page</p>
+      <p>ISG Dynamic page</p>
       {posts && posts.map(({ id, name }) => <p key={id}>{id}:{name}</p>)}
     </div>
   )
+}
+
+export async function getStaticPaths () {
+  return {
+    paths: [
+      { params: { id: '1' } },
+      { params: { id: '2' } }
+    ],
+    fallback: false // Options: true/false/blocking
+  }
 }
 
 export async function getStaticProps () {
@@ -21,8 +31,8 @@ export async function getStaticProps () {
   }
 }
 
-export default Isg
+export default IsgDynamic
 
-Isg.propTypes = {
+IsgDynamic.propTypes = {
   posts: PropTypes.array
 }

@@ -5,13 +5,13 @@ const IsgBasic = ({ posts }) => {
   return (
     <div>
       <p>ISG Basic page</p>
-      {posts && posts.map(({ id, name }) => <p key={id}>{id}:{name}</p>)}
+      {posts && posts.id}
     </div>
   )
 }
 
 export async function getStaticProps () {
-  const response = await fetch(`${process.env.BASE_URL}/api/hello`)
+  const response = await fetch(`${process.env.BASE_URL_CMS}/v2/entries/type/navBar/search?language=fr-BE`)
   const posts = await response.json()
   return {
     props: {
@@ -24,5 +24,5 @@ export async function getStaticProps () {
 export default IsgBasic
 
 IsgBasic.propTypes = {
-  posts: PropTypes.array
+  posts: PropTypes.object
 }
