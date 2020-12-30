@@ -11,8 +11,8 @@ const Isg = ({ posts }) => {
 }
 
 export async function getStaticProps () {
-  const response = await fetch('http://localhost:3000/api/hello')
-  const posts = await response.json()
+  // const response = await fetch('http://localhost:3000/api/hello')
+  const posts = []
   return {
     props: {
       posts
