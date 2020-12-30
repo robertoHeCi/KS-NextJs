@@ -5,14 +5,14 @@ const IsgBasic = ({ posts }) => {
   return (
     <div>
       <p>ISG Basic page</p>
-      {posts && posts.url}
-      {posts && posts.slug}
+      {posts && posts.id}
+      {/* {posts && posts.map(({ id, name }) => <p key={id}>{id}:{name}</p>)} */}
     </div>
   )
 }
 
 export async function getStaticProps () {
-  const response = await fetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
+  const response = await fetch(`${process.env.BASE_URL}/v2/entries/type/navBar/search?language=fr-BE`)
   const posts = await response.json()
   return {
     props: {
