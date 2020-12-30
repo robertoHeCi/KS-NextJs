@@ -18,11 +18,6 @@ const DataFetching = () => {
       title: 'SPA',
       route: '/data-fetching/single-page-application',
       description: 'Single Page application example'
-    },
-    {
-      title: 'SG',
-      route: '/data-fetching/static-generation',
-      description: 'Static generation example'
     }
   ]
 
