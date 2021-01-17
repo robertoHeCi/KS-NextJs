@@ -21,7 +21,7 @@ export default function Routing () {
   return (
     <div className={layoutStyles.container}>
       <Head>
-        <meta name="description"> NextJS app with routing and data fetching examples</meta>
+        <meta name="description" content="NextJS app with routing and data fetching examples"/>
         <title>Create Next App</title>
         <link rel="icon" href="../../public/favicon.ico" />
       </Head>
