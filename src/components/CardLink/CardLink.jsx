@@ -18,4 +18,4 @@ CardLink.propTypes = {
   description: PropTypes.string
 }
 
-export default CardLink
+export { CardLink }
